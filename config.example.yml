@@ -1,0 +1,14 @@
+database:
+  host: localhost
+  port: 5432
+  name: cost_of_living
+  user: postgres
+  password: your_password_here
+
+paths:
+  raw_data: data/raw/
+  processed_data: data/processed/
+  logs: logs/
+
+pipeline:
+  run_frequency: weekly
