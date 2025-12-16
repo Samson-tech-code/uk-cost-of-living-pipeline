@@ -1,0 +1,18 @@
+# Virtual environment
+.venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Logs (keep pipeline.log optional - you can include it if you want)
+logs/*.log
+
+# Raw/processed data (keep folders tracked via .gitkeep)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.parquet
+
+# Python cache
+__pycache__/
+*.pyc
