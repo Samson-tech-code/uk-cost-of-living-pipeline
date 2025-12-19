@@ -140,6 +140,7 @@ uk-cost-of-living-pipeline/
 git clone https://github.com/Samson-tech-code/uk-cost-of-living-pipeline.git
 cd uk-cost-of-living-pipeline
 
+
 2. Create and activate a virtual environment
 
 python -m venv .venv
@@ -162,4 +163,9 @@ python src/load/load_to_postgres.py
 
 Run SQL analysis in sql/02_analysis_views.sql
 
-Open the Power BI dashboard from the /dashboards folde
+Open the Power BI dashboard from the /dashboards folder
+
+---
+#License
+
+This project uses publicly available data from the UK Office for National Statistics (ONS) and is shared for educational and portfolio purposes only.
