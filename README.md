@@ -60,7 +60,6 @@ The PostgreSQL database uses a simple analytical schema:
 ## Example SQL Analysis
 
 The following SQL query underpins the real-terms wage gap analysis by comparing inflation and wage growth over time:
-
 ```sql
 SELECT
     d.date_id,
@@ -78,7 +77,8 @@ WHERE i.series_key = 'cpih_l55o'
   AND w.series_key = 'awe_kac3'
 ORDER BY d.date_id;
 ```
-```
+
+---
 
 ## Power BI Dashboard
 
@@ -93,7 +93,6 @@ These dashboards highlight sustained cost-of-living pressures and periods of eco
 ---
 
 ## Project Structure
-
 ```text
 uk-cost-of-living-pipeline/
 │
@@ -113,7 +112,7 @@ uk-cost-of-living-pipeline/
 ├── dashboards/             # Power BI files
 ├── logs/                   # Pipeline logs
 └── README.md
-
+```
 
 ---
 
@@ -141,37 +140,33 @@ uk-cost-of-living-pipeline/
 ```bash
 git clone https://github.com/Samson-tech-code/uk-cost-of-living-pipeline.git
 cd uk-cost-of-living-pipeline
+```
 
-
-
-2. Create and activate a virtual environment
-
+2. **Create and activate a virtual environment**
+```bash
 python -m venv .venv
 .venv\Scripts\activate   # Windows
+```
 
-
-
-3. Install dependencies
-
+3. **Install dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-
-4. Run the pipeline
-
+4. **Run the pipeline**
+```bash
 python src/extract/download_ons_timeseries.py
 python src/transform/transform_ons_timeseries.py
 python src/load/load_to_postgres.py
+```
 
+5. **Explore insights**
 
-5. Explore insights
-
-Run SQL analysis in sql/02_analysis_views.sql
-
-Open the Power BI dashboard from the /dashboards folder
+- Run SQL analysis in `sql/02_analysis_views.sql`
+- Open the Power BI dashboard from the `/dashboards` folder
 
 ---
 
 ## License
-
 
 This project uses publicly available data from the UK Office for National Statistics (ONS) and is shared for educational and portfolio purposes only.
