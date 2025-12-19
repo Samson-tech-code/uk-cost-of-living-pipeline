@@ -77,8 +77,8 @@ JOIN dim_date d
 WHERE i.series_key = 'cpih_l55o'
   AND w.series_key = 'awe_kac3'
 ORDER BY d.date_id;
-
----
+```
+```
 
 ## Power BI Dashboard
 
