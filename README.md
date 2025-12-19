@@ -94,24 +94,26 @@ These dashboards highlight sustained cost-of-living pressures and periods of eco
 
 ## Project Structure
 
+```text
 uk-cost-of-living-pipeline/
 │
 ├── data/
-│ ├── raw/ # Downloaded ONS CSV files
-│ └── processed/ # Cleaned and transformed datasets
+│   ├── raw/                # Downloaded ONS CSV files
+│   └── processed/          # Cleaned and transformed datasets
 │
 ├── src/
-│ ├── extract/ # Data extraction scripts
-│ ├── transform/ # Data cleaning and feature engineering
-│ └── load/ # PostgreSQL loading scripts
+│   ├── extract/            # Data extraction scripts
+│   ├── transform/          # Data cleaning and feature engineering
+│   └── load/               # PostgreSQL loading scripts
 │
 ├── sql/
-│ ├── 01_create_tables.sql
-│ └── 02_analysis_views.sql
+│   ├── 01_create_tables.sql
+│   └── 02_analysis_views.sql
 │
-├── dashboards/ # Power BI files
-├── logs/ # Pipeline logs
+├── dashboards/             # Power BI files
+├── logs/                   # Pipeline logs
 └── README.md
+
 
 ---
 
@@ -141,10 +143,12 @@ git clone https://github.com/Samson-tech-code/uk-cost-of-living-pipeline.git
 cd uk-cost-of-living-pipeline
 
 
+
 2. Create and activate a virtual environment
 
 python -m venv .venv
 .venv\Scripts\activate   # Windows
+
 
 
 3. Install dependencies
@@ -166,6 +170,8 @@ Run SQL analysis in sql/02_analysis_views.sql
 Open the Power BI dashboard from the /dashboards folder
 
 ---
-#License
+
+## License
+
 
 This project uses publicly available data from the UK Office for National Statistics (ONS) and is shared for educational and portfolio purposes only.
