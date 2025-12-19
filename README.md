@@ -131,3 +131,35 @@ uk-cost-of-living-pipeline/
 - Incorporate additional ONS series (energy prices, housing costs)
 - Publish dashboards to Power BI Service for online access
 
+---
+
+## How to Run
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/Samson-tech-code/uk-cost-of-living-pipeline.git
+cd uk-cost-of-living-pipeline
+
+2. Create and activate a virtual environment
+
+python -m venv .venv
+.venv\Scripts\activate   # Windows
+
+
+3. Install dependencies
+
+pip install -r requirements.txt
+
+
+4. Run the pipeline
+
+python src/extract/download_ons_timeseries.py
+python src/transform/transform_ons_timeseries.py
+python src/load/load_to_postgres.py
+
+
+5. Explore insights
+
+Run SQL analysis in sql/02_analysis_views.sql
+
+Open the Power BI dashboard from the /dashboards folde
